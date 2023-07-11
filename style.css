@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #d4a373;
+  --secondary: #ccd5ae;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: var(--primary);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  transition: background-color 0.3s;
+  border-radius: 2rem;
+}
+
+a:hover {
+  background-color: whitesmoke;
+}
+
+nav button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+nav button:hover {
+  background-color: whitesmoke;
+}
+
+.toggler {
+  display: none;
+  float: right;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+}
+
+/* Home */
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4rem;
+  text-align: center;
+}
+
+.home h1{
+  font-size: 4rem;
+}
+
+.home p{
+  font-size: 2rem;
+}
+
+.home button{
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 2rem;
+}
+
+.home img{
+  height: inherit;
+  width: 25rem;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+
+  /* Navbar */
+
+  .logo{
+    margin-bottom: .5rem;
+  }
+  nav,
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  li{
+    padding: .5rem;
+  }
+  button{
+    margin: .25rem;
+  }
+  .toggler {
+    display: flex;
+  }
+  .nav-links,
+  .nav-btns {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-links.active,
+  .nav-btns.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Home  */
+
+  .home{
+    flex-direction: column;
+  }
+  .home img{
+    width: 15rem;
+    margin-top: 2rem;
+  }
+}

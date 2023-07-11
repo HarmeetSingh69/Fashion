@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      Fashion
+    </div>
+    <a href="#" class="toggler">
+      &#9776
+    </a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dress</a></li>
+        <li><a href="#">Jacket</a></li>
+        <li><a href="#">Sweater</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">Shoes</a></li>
+      </ul>
+    </div>
+    <div class="nav-btns">
+      <button>
+        Login
+      </button>
+      <button>
+        Signup
+      </button>
+    </div>
+  </nav>
+
+  <section class="home">
+    <div class="text">
+      <h1>New Amazing<br>stuff is here</h1> <br>
+      <p>Shop today and get 60% discount</p> <br>
+      <button>Shop Now</button>
+    </div>
+    <div class="pic">
+      <img src="./assets/images/hero.jpg" alt="/">
+    </div>
+  </section>
+
+</body>
+<script>
+  const toggleButton = document.getElementsByClassName('toggler')[0]
+  const navbarLinks = document.getElementsByClassName('nav-links')[0]
+  const navbarLinks2 = document.getElementsByClassName('nav-btns')[0]
+
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+    navbarLinks2.classList.toggle('active')
+  })
+</script>
+
+</html>
